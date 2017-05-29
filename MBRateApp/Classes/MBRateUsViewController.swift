@@ -116,13 +116,13 @@ class MBRateUsViewController : UIViewController {
         self.starsMask.isHidden = false
         if sender.tag >= 4 {
             self.resultLabel.text = self.rateUsInfo?.positive
-            self.callToActionButton.setTitle(self.positiveButtonText, for: UIControlState())
+            self.callToActionButton.setTitle(self.rateUsInfo?.positiveButtonText, for: UIControlState())
             self.shouldRate = true
             self.callToActionButton.backgroundColor = self.rateUsInfo?.positiveButtonColor
         }
         else {
             self.resultLabel.text = self.rateUsInfo?.negative
-            self.callToActionButton.setTitle(self.negativeButtonText, for: UIControlState())
+            self.callToActionButton.setTitle(self.rateUsInfo?.negativeButtonText, for: UIControlState())
             self.shouldRate = false
             self.callToActionButton.backgroundColor = self.rateUsInfo?.negativeButtonColor
         }
