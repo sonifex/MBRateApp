@@ -16,6 +16,8 @@ public struct MBRateUsInfo {
     public var subtitle = "Please rate your experience"
     public var positive = "Awesome!"
     public var negative = "Darn. we should have been better."
+    public var positiveButtonText = "Rate in the AppStore"
+    public var negativeButtonText = "Send us feedback"
     public var backgroundColor = UIColor.white
     public var positiveButtonColor = UIColor.blue
     public var negativeButtonColor = UIColor.blue
@@ -114,13 +116,13 @@ class MBRateUsViewController : UIViewController {
         self.starsMask.isHidden = false
         if sender.tag >= 4 {
             self.resultLabel.text = self.rateUsInfo?.positive
-            self.callToActionButton.setTitle("Rate in the AppStore", for: UIControlState())
+            self.callToActionButton.setTitle(self.positiveButtonText, for: UIControlState())
             self.shouldRate = true
             self.callToActionButton.backgroundColor = self.rateUsInfo?.positiveButtonColor
         }
         else {
             self.resultLabel.text = self.rateUsInfo?.negative
-            self.callToActionButton.setTitle("Send us feedback", for: UIControlState())
+            self.callToActionButton.setTitle(self.negativeButtonText, for: UIControlState())
             self.shouldRate = false
             self.callToActionButton.backgroundColor = self.rateUsInfo?.negativeButtonColor
         }

@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     }
 
 
-    @IBAction func showRateUsPopup(sender: UIButton) {
+    @IBAction func showRateUsPopup(_ sender: UIButton) {
         MBRateUs.sharedInstance.showRateUs(self
             , positiveBlock: { () -> Void in
                 let alert = UIAlertController(title: "MBAppRate", message: "User rated the app", preferredStyle: .Alert)
